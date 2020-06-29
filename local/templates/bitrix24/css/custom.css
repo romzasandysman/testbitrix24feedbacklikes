@@ -1,0 +1,31 @@
+.wrap-btn-feedback {
+  order: 5;
+  margin: 10px;
+}
+.wrap-btn-feedback .btn {
+  cursor: pointer;
+}
+#feedback .modal-content {
+  min-height: 200px;
+}
+#feedback .modal-content .spinner-border {
+  margin-top: 15%;
+  margin-left: 45%;
+}
+.wrap-likes {
+  line-height: 1px;
+}
+.wrap-likes.disable {
+  pointer-events: none;
+}
+.wrap-likes i {
+  cursor: pointer;
+  padding-left: 5px;
+  margin-right: 5px;
+}
+.wrap-likes i:hover {
+  color: #4d64a1;
+}
+.wrap-likes i.active {
+  color: #4d64a1;
+}
