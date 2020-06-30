@@ -49,6 +49,7 @@ class LikeController
 
                     if ($arLike['IP'] == $ip){
                         $arItem['HAS_LIKE_FROM_USER'] = true;
+                        $arItem['CHOOSE_LIKE'] = !empty($arLike['LIKE']);
                     }
 
                     if ($arLike['LIKE']) {

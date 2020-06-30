@@ -26,12 +26,12 @@ $arItem = $arResult;
 			/>
 	<?endif?>
     <div :class="{disable: disabled}"
-         data-id="<?php echo (int)$arItem['ID']?>"
+         data-id="<?php echo $arItem['ID']?>"
          class="js-likes wrap-likes">
-        <span>{{countLikes}}</span>
-        <i v-on:click="sendLike($event, '<?php echo \My\Main::getIp()?>', '<?php echo $arItem['ID']?>')" class="fa fa-thumbs-up"></i>
-        <span>{{countDisLikes}}</span>
-        <i v-on:click="sendDisLike($event, '<?php echo \My\Main::getIp()?>', '<?php echo $arItem['ID']?>')" class="fa fa-thumbs-down"></i>
+        <span class="js-count-like">{{countLikes}}</span>
+        <i v-on:click="sendLike($event, '<?php echo \My\Main::getIp()?>', '<?php echo $arItem['ID']?>')"  :class="{active: likeActive}" class="fa fa-thumbs-up"></i>
+        <span class="js-count-like">{{countDisLikes}}</span>
+        <i v-on:click="sendDisLike($event, '<?php echo \My\Main::getIp()?>', '<?php echo $arItem['ID']?>')" :class="{active: disLikeActive}" class="fa fa-thumbs-down"></i>
     </div>
 	<?if($arParams["DISPLAY_DATE"]!="N" && $arResult["DISPLAY_ACTIVE_FROM"]):?>
 		<span class="news-date-time"><?=$arResult["DISPLAY_ACTIVE_FROM"]?></span>
